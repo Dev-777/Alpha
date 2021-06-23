@@ -1,9 +1,8 @@
 import React from "react";
 import style from "../../assets/scss/signUp.module.scss";
-import Icon from "@ant-design/icons";
-import { ReactComponent as logo } from "../../assets/svgs/logo.svg";
-import { Button, Checkbox, Form, Input } from "antd";
+import { Button, Form, Input } from "antd";
 import { Link } from "react-router-dom";
+import Logo from "../../components/Logo";
 
 const layout = {
   labelCol: {
@@ -31,7 +30,7 @@ const SignUp = () => {
   return (
     <div className={style.main}>
       <div className={style.content}>
-        <Icon className={style.logo} component={logo} />
+        <Logo size={100} />
         <Form
           {...layout}
           name="basic"
@@ -117,11 +116,11 @@ const SignUp = () => {
           </Form.Item>
           <Form.Item {...tailLayout}>
             <Button type="primary" htmlType="submit">
-              Submit
+              Sign Up
             </Button>
           </Form.Item>
         </Form>
-        <div className={style.signUp}>
+        <div className={style.signIn}>
           <Link to={"/signIn"}>
             <span>Sign In</span>
           </Link>

@@ -1,14 +1,23 @@
 import React from "react";
-import AlphaButton from "../components/ui/AlphaButton";
+import AlphaButton from "../components/anth/AlphaButton";
 import { Link } from "react-router-dom";
+import { Layout } from "antd";
+import { Content, Footer } from "antd/es/layout/layout";
+import Sider from "antd/es/layout/Sider";
+import HeaderHome from "../view/HeaderHome";
 
 const Home = () => {
   return (
     <>
-      <h1>Home</h1>
-      <Link to={"signIn"}>
-        <AlphaButton label={"Sign In"} color={"primary"} />
-      </Link>
+      <Layout>
+        <HeaderHome />
+        <Layout>
+          <Sider>left sidebar</Sider>
+          <Content>main content</Content>
+          <Sider>right sidebar</Sider>
+        </Layout>
+        <Footer>footer</Footer>
+      </Layout>
     </>
   );
 };

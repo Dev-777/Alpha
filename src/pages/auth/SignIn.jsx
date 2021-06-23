@@ -2,8 +2,8 @@ import React from "react";
 import Icon from "@ant-design/icons";
 import style from "../../assets/scss/signIn.module.scss";
 import { Form, Input, Button, Checkbox } from "antd";
-import { ReactComponent as logo } from "../../assets/svgs/logo.svg";
 import { Link } from "react-router-dom";
+import Logo from "../../components/Logo";
 
 const layout = {
   labelCol: {
@@ -30,7 +30,7 @@ const SignIn = () => {
   return (
     <div className={style.main}>
       <div className={style.content}>
-        <Icon className={style.logo} component={logo} />
+        <Logo size={100} />
         <Form
           {...layout}
           name="basic"
@@ -41,16 +41,16 @@ const SignIn = () => {
           onFinishFailed={onFinishFailed}
         >
           <Form.Item
-            label="Username"
-            name="username"
+            label="Email"
+            name="email"
             rules={[
               {
                 required: true,
-                message: "Please input your username!",
+                message: "Please input your email!",
               },
             ]}
           >
-            <Input placeholder={"Username"} />
+            <Input placeholder={"email"} />
           </Form.Item>
           <Form.Item
             label="Password"
@@ -69,7 +69,7 @@ const SignIn = () => {
           </Form.Item>
           <Form.Item {...tailLayout}>
             <Button type="primary" htmlType="submit">
-              Submit
+              Sign In
             </Button>
           </Form.Item>
         </Form>
