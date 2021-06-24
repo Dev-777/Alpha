@@ -65,18 +65,6 @@ const SignUp = () => {
             <Input placeholder={"Last Name"} />
           </Form.Item>
           <Form.Item
-            label="Username"
-            name="username"
-            rules={[
-              {
-                required: true,
-                message: "Please input your username!",
-              },
-            ]}
-          >
-            <Input placeholder={"Username"} />
-          </Form.Item>
-          <Form.Item
             label="Emil"
             name="email"
             rules={[
@@ -101,7 +89,6 @@ const SignUp = () => {
           >
             <Input.Password placeholder={"Password"} />
           </Form.Item>
-
           <Form.Item
             label="Confirm Password"
             name="confirmPassword"
