@@ -1,3 +1,3 @@
-import { rootReducer } from "./rootReducer";
+import { mainReducer } from "./mainReducer";
 
-export default rootReducer;
+export default mainReducer;

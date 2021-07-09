@@ -1,16 +1,19 @@
 import React from "react";
 import { Route } from "react-router";
-import SignIn from "./pages/auth/SignIn";
-import Home from "./pages/Home";
 import style from "./assets/scss/app.module.scss";
-import SignUp from "./pages/auth/SignUp";
+import routes from "./routes";
 
 const App = () => {
   return (
     <div className={style.app}>
-      <Route exact path={"/"} component={Home} />
-      <Route exact path={"/signIn"} component={SignIn} />
-      <Route exact path={"/signUp"} component={SignUp} />
+      {routes.map((route, index) => (
+        <Route
+          key={index}
+          path={route.path}
+          exact={route.exact}
+          children={<route.page />}
+        />
+      ))}
     </div>
   );
 };
