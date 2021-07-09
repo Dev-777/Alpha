@@ -74,7 +74,7 @@ const SignIn = () => {
           </Form.Item>
         </Form>
         <div className={style.signUp}>
-          <Link to={"/signUp"}>
+          <Link to={"/"}>
             <span>Sign Up</span>
           </Link>
         </div>

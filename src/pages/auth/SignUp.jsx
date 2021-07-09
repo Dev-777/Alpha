@@ -3,6 +3,9 @@ import style from "../../assets/scss/signUp.module.scss";
 import { Button, Form, Input } from "antd";
 import { Link } from "react-router-dom";
 import Logo from "../../components/Logo";
+import AlphaButton from "../../components/anth/AlphaButton";
+import { API } from "../../api/api";
+import axios from "axios";
 
 const layout = {
   labelCol: {
@@ -27,6 +30,16 @@ const SignUp = () => {
     console.log("Failed:", errorInfo);
   };
 
+  const click = async () => {
+    const config = {
+      name: "test name ?",
+    };
+    try {
+      const res = await API.post("/auth/register", config);
+    } catch (error) {
+      console.log(error.response.data, "error ?");
+    }
+  };
   return (
     <div className={style.main}>
       <div className={style.content}>
@@ -111,6 +124,7 @@ const SignUp = () => {
           <Link to={"/signIn"}>
             <span>Sign In</span>
           </Link>
+          <AlphaButton label={"Click"} color={"primary"} click={click} />
         </div>
       </div>
     </div>
