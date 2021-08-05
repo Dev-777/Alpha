@@ -1,29 +1,14 @@
 import React from "react";
-import Icon from "@ant-design/icons";
 import style from "../../assets/scss/signIn.module.scss";
 import { Form, Input, Button, Checkbox } from "antd";
 import { Link } from "react-router-dom";
 import Logo from "../../components/Logo";
 
-const layout = {
-  labelCol: {
-    span: 7,
-  },
-  wrapperCol: {
-    span: 16,
-  },
-};
-const tailLayout = {
-  wrapperCol: {
-    offset: 7,
-    span: 16,
-  },
-};
-
 const SignIn = () => {
   const onFinish = (values) => {
     console.log("Success:", values);
   };
+
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
@@ -32,7 +17,14 @@ const SignIn = () => {
       <div className={style.content}>
         <Logo size={100} />
         <Form
-          {...layout}
+          {...{
+            labelCol: {
+              span: 7,
+            },
+            wrapperCol: {
+              span: 16,
+            },
+          }}
           name="basic"
           initialValues={{
             remember: true,
@@ -64,10 +56,26 @@ const SignIn = () => {
           >
             <Input.Password placeholder={"Password"} />
           </Form.Item>
-          <Form.Item {...tailLayout} name="remember" valuePropName="checked">
+          <Form.Item
+            {...{
+              wrapperCol: {
+                offset: 7,
+                span: 16,
+              },
+            }}
+            name="remember"
+            valuePropName="checked"
+          >
             <Checkbox>Remember me</Checkbox>
           </Form.Item>
-          <Form.Item {...tailLayout}>
+          <Form.Item
+            {...{
+              wrapperCol: {
+                offset: 7,
+                span: 16,
+              },
+            }}
+          >
             <Button type="primary" htmlType="submit">
               Sign In
             </Button>

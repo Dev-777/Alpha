@@ -1,6 +1,4 @@
 import React from "react";
-import AlphaButton from "../components/anth/AlphaButton";
-import { Link } from "react-router-dom";
 import { Layout } from "antd";
 import { Content, Footer } from "antd/es/layout/layout";
 import Sider from "antd/es/layout/Sider";
@@ -11,10 +9,10 @@ const Home = () => {
     <>
       <Layout>
         <HeaderHome />
-        <Layout>
-          <Sider>left sidebar</Sider>
+        <Layout style={{ height: 800 }}>
+          <Sider style={{ background: "red" }}>left sidebar</Sider>
           <Content>main content</Content>
-          <Sider>right sidebar</Sider>
+          <Sider style={{ background: "green" }}>right sidebar</Sider>
         </Layout>
         <Footer>footer</Footer>
       </Layout>
