@@ -1,13 +1,16 @@
 import React from "react";
 
 const TestOne = () => {
-  console.log(Object.prototype, "obj");
-  obj;
   return (
     <>
-      <h1>JavaScript Object [ 18 Exercises with Solution ]</h1>
-      <h2 style={{ color: "tomato", fontWeight: 900 }}>Exercise 11</h2>
-      <p>JavaScript Object [ 18 Exercises with Solution ], cool exercise []</p>
+      <h1>
+        JavaScript Searching and Sorting Algorithm [24 Exercises with Solution ]
+      </h1>
+      <h2 style={{ color: "tomato", fontWeight: 900 }}>Exercise 1</h2>
+      <p>
+        JavaScript Searching and Sorting Algorithm [24 Exercises with Solution
+        ], cool exercise []
+      </p>
       -------------------------------------------------------------------------
       <p>
         JavaScript String [ 49 Exercises with Solution ], cool exercise [23,25]
